@@ -1,0 +1,355 @@
+/*公用部分*/
+.go {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.more {
+    position: fixed;
+    bottom: 100px;
+    right: 60px;
+    z-index: 1001;
+    animation: more 0.4s linear infinite alternate;
+}
+
+@keyframes more {
+    from {
+        transform: translate(0, -10px);
+    }
+    to {
+        transform: translate(0, 10px);
+    }
+}
+
+/*第一屏*/
+.screen01 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../images/01-bg.png") no-repeat center bottom;
+}
+
+.screen01 .text {
+    width: 470px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -235px;
+    /*translate位移 百分比是基于本身*/
+    transform: translate(250px, 100px);
+    /*调用动画 默认的动画速度  ease 动画的逆播放 alternate */
+    animation: screen01-text 0.75s linear infinite alternate;
+}
+
+.screen01 .sofa {
+    width: 134px;
+    height: 147px;
+    position: absolute;
+    left: 50%;
+    margin-left: -67px;
+    transform: translate(-160px, 200px);
+    animation: screen01-sofa 1s linear infinite alternate;
+}
+
+.screen01 .goods {
+    width: 824px;
+    height: 274px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    margin-left: -412px;
+}
+
+/*动画序列*/
+@keyframes screen01-text {
+    from {
+        transform: translate(250px, 80px);
+    }
+    to {
+        transform: translate(250px, 120px);
+    }
+}
+
+@keyframes screen01-sofa {
+    from {
+        transform: translate(-160px, 180px);
+    }
+    to {
+        transform: translate(-160px, 220px);
+    }
+}
+
+/*第二屏*/
+.screen02 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../images/02-bg.png") no-repeat center bottom;
+}
+
+.screen02 .text {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.screen02 .searchBox {
+    width: 222px;
+    height: 45px;
+    position: absolute;
+    left: 50%;
+    bottom: 300px;
+    transform: translateX(1000px);
+    opacity: 0;
+    z-index: 1;
+}
+
+.screen02 .searchBox .search {
+}
+
+.screen02 .searchBox .key {
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    opacity: 0;
+    transition: all 1s linear 1s;
+}
+
+.screen02 .list {
+    position: absolute;
+    left: 50%;
+    bottom: 210px;
+    transform: translateX(-50%) scale(0);
+    /*设置转换中心*/
+    transform-origin: right bottom;
+    transition: all 1s linear 3s;
+}
+
+.screen02 .list .goods {
+}
+
+/*做第二屏掉到第三屏动画*/
+.screen02 .sofa {
+    position: absolute;
+    left: 50%;
+    bottom: 300px;
+    transform: scale(0.5) translateX(-150%);
+    opacity: 0;
+}
+
+.screen02 .sofa.animated {
+    animation: sofa2to3 1.5s linear forwards;
+}
+
+@keyframes sofa2to3 {
+    from {
+        opacity: 1;
+        z-index: 10000;
+    }
+    to {
+        transform: scale(1) translate(-250px, 800px);
+        opacity: 1;
+    }
+}
+
+/*做动画  等第二屏完全显示  去执行动画*/
+.selected .screen02 .list {
+    transform: translateX(-50%) scale(1);
+}
+
+.selected .screen02 .searchBox {
+    /* forwards 保持动画结束状态  backwards 默认返回初始状态 */
+    animation: screen02-search 4s linear forwards;
+}
+
+.selected .screen02 .key {
+    opacity: 1;
+}
+
+@keyframes screen02-search {
+    from {
+
+    }
+    25% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(90px, -140px) scale(0.7);
+        opacity: 1;
+    }
+}
+
+/*第三屏*/
+.screen03 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../images/03-bg.png") no-repeat center bottom;
+}
+
+.screen03 .change {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(40px, -180px);
+}
+
+.screen03 .change img:last-child {
+    display: none;
+}
+
+.screen03 .cart {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(40px, -100px);
+}
+
+.screen03 .cart img:last-child {
+    display: none;
+}
+
+.screen03 .sofa {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-120%, -240px);
+    display: none;
+}
+
+.screen03 .skewSofa {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-120%, -240px);
+    display: none;
+}
+
+.screen03 .skewSofa.animated {
+    animation: screen03-skewSofa 1.5s linear;
+}
+
+@keyframes screen03-skewSofa {
+    from {
+        transform: translate(-120%, -240px);
+        z-index: 1000;
+    }
+    to {
+        transform: translate(-10%, 450px);
+        z-index: 1000;
+    }
+}
+
+/*当选中的时候*/
+.selected .screen03 .sofa {
+    display: block;
+}
+
+.selected .screen03 .change img:first-child {
+    display: none;
+}
+
+.selected .screen03 .change img:last-child {
+    display: block;
+}
+
+.selected .screen03 .cart img:first-child {
+    display: none;
+}
+
+.selected .screen03 .cart img:last-child {
+    display: block;
+}
+
+/*第四屏*/
+.screen04 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../images/04-bg.png") no-repeat center bottom;
+}
+
+.screen04 .cloud {
+    position: absolute;
+    left: 50%;
+    bottom: 530px;
+    transform: translateX(-50%);
+    animation: screen04-cloud 20s linear infinite alternate;
+}
+
+@keyframes screen04-cloud {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.screen04 .text {
+    position: absolute;
+    left: 50%;
+    bottom: 460px;
+    transform: translateX(-50%);
+}
+
+.screen04 .text img:last-child {
+    display: none;
+}
+
+.screen04 .cart {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+.screen04 .cart.animated{
+    animation: screen04-cart 3s linear forwards;
+}
+@keyframes screen04-cart {
+    from{}
+    to{
+        transform: translateX(2000px);
+    }
+}
+
+.screen04 .cart .cartImg {
+    position: relative;
+    z-index: 1;
+}
+
+.screen04 .cart .sofaImg {
+    position: absolute;
+    left: 160px;
+    top: -50px;
+    display: none;
+}
+
+.screen04 .address {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.screen04 .address .addressImg {
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+    display: none;
+}
