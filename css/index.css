@@ -1,4 +1,4 @@
-/*¹«ÓÃ²¿·Ö*/
+/*å…¬ç”¨éƒ¨åˆ†*/
 .go{
     position: fixed;
     top: 40px;
@@ -9,7 +9,7 @@
     overflow: hidden;
     z-index: 1000;
 }
-/*¼ÌĞøÍùÏÂµÄ¶¯»­*/
+/*ç»§ç»­å¾€ä¸‹çš„åŠ¨ç”»*/
 .more{
     position: fixed;
     bottom: 100px;
@@ -25,7 +25,7 @@
         transform: translate(0,10px);
     }
 }
-/*µÚÒ»ÆÁ*/
+/*ç¬¬ä¸€å±*/
 .screen01 {
     width: 100%;
     height: 100%;
@@ -58,7 +58,7 @@
     bottom: 100px;
     margin-left: -412px;
 }
-/*¶¯»­ĞòÁĞ*/
+/*åŠ¨ç”»åºåˆ—*/
 @keyframes screen01-text {
     from {
         transform: translate(250px,80px);
@@ -76,7 +76,7 @@
     }
 }
 
-/*µÚ¶şÆÁ*/
+/*ç¬¬äºŒå±*/
 .screen02 {
     width: 100%;
     height: 100%;
@@ -114,7 +114,7 @@
     transform-origin: right bottom;
     transition: all 1s linear 3s;
 }
-/*µ¥¸öÉ³·¢ ×öµÚ¶şÆÁµôµ½µÚÈıÆÁ*/
+/*å•ä¸ªæ²™å‘ åšç¬¬äºŒå±æ‰åˆ°ç¬¬ä¸‰å±*/
 .screen02 .sofa{
     position: absolute;
     left: 50%;
@@ -123,7 +123,7 @@
     opacity: 0;
 }
 .screen02 .sofa.animated{
-    /*ÒòÎªÉèÖÃÁË²ã¼¶  ËùÒÔ²»ÓÃ±£³Ö¶¯»­½áÊø×´Ì¬*/
+    /*å› ä¸ºè®¾ç½®äº†å±‚çº§  æ‰€ä»¥ä¸ç”¨ä¿æŒåŠ¨ç”»ç»“æŸçŠ¶æ€*/
     /*animation: sofa2to3 1.5s linear forwards;*/
     animation: sofa2to3 1.5s linear;
 }
@@ -138,12 +138,12 @@
         z-index: 10000;
     }
 }
-/*µÈµÚ¶şÆÁÍêÈ«ÏÔÊ¾ È¥Ö´ĞĞ¶¯»­*/
+/*ç­‰ç¬¬äºŒå±å®Œå…¨æ˜¾ç¤º å»æ‰§è¡ŒåŠ¨ç”»*/
 .selected .screen02 .list{
     transform: translateX(-50%) scale(1);
 }
 .selected .screen02 .searchBox{
-    /* forwards ±£³Ö¶¯»­½áÊø×´Ì¬  backwards Ä¬ÈÏ·µ»Ø³õÊ¼×´Ì¬ */
+    /* forwards ä¿æŒåŠ¨ç”»ç»“æŸçŠ¶æ€  backwards é»˜è®¤è¿”å›åˆå§‹çŠ¶æ€ */
     animation: screen02-search 4s linear forwards;
 }
 @keyframes screen02-search {
@@ -167,7 +167,7 @@
     opacity: 1;
 }
 
-/*µÚÈıÆÁ*/
+/*ç¬¬ä¸‰å±*/
 .screen03{
     width: 100%;
     height: 100%;
@@ -206,7 +206,7 @@
     transform: translate(-120%,-230px);
     display: none;
 }
-/*É³·¢Ğ±×ÅµôÏÂÀ´µ½¹ºÎï³µÀï*/
+/*æ²™å‘æ–œç€æ‰ä¸‹æ¥åˆ°è´­ç‰©è½¦é‡Œ*/
 .screen03 .skewSofa.animated{
     animation: screen03-skewSofa 1s linear;
 }
@@ -220,7 +220,7 @@
         z-index: 1;
     }
 }
-/*µ±Ñ¡ÖĞµÄÊ±ºò  Ò²¾ÍÊÇÉ³·¢µôÏÂÀ´µÄÊ±ºò*/
+/*å½“é€‰ä¸­çš„æ—¶å€™  ä¹Ÿå°±æ˜¯æ²™å‘æ‰ä¸‹æ¥çš„æ—¶å€™*/
 .selected .screen03 .sofa{
     display: block;
 }
@@ -237,14 +237,14 @@
     display: block;
 }
 
-/*µÚËÄÆÁ*/
+/*ç¬¬å››å±*/
 .screen04{
     width: 100%;
     height: 100%;
     position: relative;
     background: url("../images/04-bg.png") no-repeat center bottom;
 }
-/*ÔÆ²ÊÀ´»Ø¶¯*/
+/*äº‘å½©æ¥å›åŠ¨*/
 .screen04 .cloud{
     position: absolute;
     left: 50%;
@@ -260,7 +260,7 @@
         transform: translateX(100%);
     }
 }
-/*¹ºÎï³µÉÏ±ßµØÖ·*/
+/*è´­ç‰©è½¦ä¸Šè¾¹åœ°å€*/
 .screen04 .text{
     position: absolute;
     left: 50%;
@@ -278,7 +278,7 @@
     transform: translateX(-50%);
     z-index: 1001;
 }
-/*¹ºÎï³µÅÜ*/
+/*è´­ç‰©è½¦è·‘*/
 .screen04 .cart.animated{
     animation: screen04-cart 3s linear forwards;
 }
@@ -312,21 +312,21 @@
     transform: translateX(-50%);
     display: none;
 }
-/*µÚÎåÆÁ*/
+/*ç¬¬äº”å±*/
 .screen05 {
     width: 100%;
     height: 100%;
     position: relative;
     background: url("../images/05-bg.png");
 }
-/*ÎÄ×Ö*/
+/*æ–‡å­—*/
 .screen05 .text{
     position: absolute;
     left: 50%;
     bottom: 600px;
     margin-left: -500px;
 }
-/*¿¨Æ¬*/
+/*å¡ç‰‡*/
 .screen05 .card{
     width: 358px;
     height: 221px;
@@ -346,7 +346,7 @@
     left: 100px;
     transition: all 1s linear 2s;
 }
-/*É³·¢*/
+/*æ²™å‘*/
 .screen05 .sofa{
     position: absolute;
     left: 50%;
@@ -356,7 +356,7 @@
     opacity: 0;
     z-index: 1;
 }
-/*É³·¢Àë¿ªµÄÊ±ºòµôµ½°ü¹üÄÚ*/
+/*æ²™å‘ç¦»å¼€çš„æ—¶å€™æ‰åˆ°åŒ…è£¹å†…*/
 .selected .screen05 .sofa.animated{
     animation: screen05-sofa5to6 1s linear;
 }
@@ -370,7 +370,7 @@
         opacity: 1;
     }
 }
-/*ÓÒ²àÊó±êºÍÊÖ*/
+/*å³ä¾§é¼ æ ‡å’Œæ‰‹*/
 .screen05 .mouse{
     width: 205px;
     height: 100%;
@@ -396,11 +396,11 @@
     transform: translateY(600px);
     transition: all 1s linear;
 }
-/*ÊÖÉÏÀ´µÄ¶¯»­*/
+/*æ‰‹ä¸Šæ¥çš„åŠ¨ç”»*/
 .selected .screen05 .mouse .handImg{
     transform: none;
 }
-/*É³·¢µôÏÂÀ´µÄ¶¯»­*/
+/*æ²™å‘æ‰ä¸‹æ¥çš„åŠ¨ç”»*/
 .selected .screen05 .sofa{
     animation: screen05-sofa 2s linear 1s forwards;
 }
@@ -417,12 +417,12 @@
         opacity: 1;
     }
 }
-/*ÕËµ¥ÂıÂıÉÏÀ´µÄ¶¯»­*/
+/*è´¦å•æ…¢æ…¢ä¸Šæ¥çš„åŠ¨ç”»*/
 .selected .screen05 .card .orderImg{
     transform: translateY(-100px);
 }
 
-/*µÚÁùÆÁ*/
+/*ç¬¬å…­å±*/
 .screen06{
     width: 100%;
     height: 100%;
@@ -433,7 +433,7 @@
 .selected .screen06{
     background: url("../images/06-bg.png") no-repeat 100% 100%;
 }
-/*ÔÆ²Ê*/
+/*äº‘å½©*/
 .screen06 .cloud .cloud01Img,
 .screen06 .cloud .cloud02Img{
     position: absolute;
@@ -454,7 +454,7 @@
         transform: translateX(500px);
     }
 }
-/*ÎÄ×Ö*/
+/*æ–‡å­—*/
 .screen06 .text{
     position: absolute;
     left: 50%;
@@ -472,7 +472,7 @@
     opacity: 1;
 }
 
-/*°ü¹ü*/
+/*åŒ…è£¹*/
 .screen06 .box{
     position: absolute;
     left: 50%;
@@ -484,7 +484,7 @@
     margin-left: -350px;
     transform: translateY(400px) scale(0.4);
 }
-/*Æû³µ*/
+/*æ±½è½¦*/
 .screen06 .car{
     position: absolute;
     left: 50%;
@@ -494,7 +494,7 @@
 .screen06 .car .carImg{
     display: block;
 }
-/*Âô¼ÒµØÖ·*/
+/*å–å®¶åœ°å€*/
 .screen06 .car .buyerImg{
     position: absolute;
     right: -80px;
@@ -505,7 +505,7 @@
 .selected .screen06 .car .buyerImg{
     opacity: 1;
 }
-/*ÊÕ»õµØÖ·*/
+/*æ”¶è´§åœ°å€*/
 .screen06 .car .addressImg{
     position: absolute;
     right: -80px;
@@ -516,7 +516,7 @@
 .selected .screen06 .car .addressImg{
     opacity: 1;
 }
-/*¿ìµİÔ±*/
+/*å¿«é€’å‘˜*/
 .screen06 .car .workerImg{
     position: absolute;
     left: 0;
@@ -540,7 +540,7 @@
 .selected .screen06 .car .sayImg{
     opacity: 1;
 }
-/*ÊÕ»õÈËºÍÃÅ*/
+/*æ”¶è´§äººå’Œé—¨*/
 .screen06 .person{
     width: 106px;
     height: 150px;
@@ -569,14 +569,14 @@
     right: 250px;
 }
 
-/*µÚÆßÆÁ*/
+/*ç¬¬ä¸ƒå±*/
 .screen07{
     width: 100%;
     height: 100%;
     position: absolute;
     background: url("../images/07-bg.png") no-repeat center bottom;
 }
-/*ĞÇĞÇ*/
+/*æ˜Ÿæ˜Ÿ*/
 .screen07 .start{
     position: absolute;
     left: 50%;
@@ -588,7 +588,7 @@
     margin-right: 6px;
     display: none;
 }
-/*ºÃÆÀ*/
+/*å¥½è¯„*/
 .screen07 .text{
     position: absolute;
     left: 50%;
@@ -612,7 +612,7 @@
     }
 }
 
-/*µÚ°ËÆÁ*/
+/*ç¬¬å…«å±*/
 .screen08{
     width: 100%;
     height: 100%;
@@ -620,7 +620,7 @@
     background: url("../images/08-bg.png");
     cursor: pointer;
 }
-/*¿ªÊ¼¹ºÎï*/
+/*å¼€å§‹è´­ç‰©*/
 .screen08 .btn{
     width: 389px;
     height: 160px;
@@ -632,7 +632,7 @@
 .screen08 .btn .btn02Img{
     display: none;
 }
-/*ÔÙÀ´Ò»´Î*/
+/*å†æ¥ä¸€æ¬¡*/
 .screen08 .again{
     position: absolute;
     left: 50%;
@@ -640,7 +640,7 @@
     bottom: 450px;
     margin-left: 350px;
 }
-/*ÊÖ*/
+/*æ‰‹*/
 .screen08 .hand{
     position: absolute;
     left: 50%;
